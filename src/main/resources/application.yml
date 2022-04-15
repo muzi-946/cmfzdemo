@@ -1,0 +1,20 @@
+#配置端口号 配置jsp的热部署
+server:
+  port: 8802
+  servlet:
+    context-path: /cmfz
+    jsp:
+      init-parameters:
+        development: true
+#数据源的配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cmfz
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+
+#Mybatis的配置
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
